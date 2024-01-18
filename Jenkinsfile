@@ -5,7 +5,7 @@ node{
     stage('Prepare Environment'){
         echo 'Initialize Environment'
         mavenHome = tool name: 'M3' , type: 'M3'
-        mavenCMD = "${mavenHome}/bin/mvn"
+        mavenCMD = "\$(mavenHome)/bin/mvn"
         tag="1.0"
 	dockerHubUser="ayemyak"
 	containerName="insure-asi"
